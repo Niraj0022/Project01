@@ -2,14 +2,18 @@
   "name": "firstproject",
   "version": "1.0.0",
   "description": "Ceating frst Project in Backend",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "noedmon source/index.js"
   },
   "keywords": [
     "Javascript",
     "Bbackend"
   ],
   "author": "Niraj",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
