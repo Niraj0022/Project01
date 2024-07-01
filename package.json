@@ -1,0 +1,15 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "Ceating frst Project in Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "Bbackend"
+  ],
+  "author": "Niraj",
+  "license": "ISC"
+}
