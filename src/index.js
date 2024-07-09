@@ -19,17 +19,6 @@ connectDB()
 }) 
 
 
-app.get('/' , (req,res) => {
-    
-    try {
-        res.status(200).json({
-            success: true,
-        })
-        console.log("chal ja bsdk")
-    } catch (error) {
-        console.log(error)
-    }
-})
 
 
 
