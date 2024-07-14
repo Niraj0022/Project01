@@ -17,7 +17,7 @@ const generateAccessAndRefreshToken = async(userId) => {
 
 
     }catch(error){
-        throw new apiError(500, "Something went wrong while generating refress and access token")
+        throw new apiError(500, "Something went wrong while generating refresh and access token")
     }
 }
 
@@ -151,6 +151,10 @@ const loginUser = asyncHandler(async (req, res) => {
         )
     )
 
+})
+
+logoutUser = asyncHandler(async( req, res) => {
+    User.findById
 })
 
 
