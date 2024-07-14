@@ -23,25 +23,8 @@ const generateAccessAndRefreshToken = async(userId) => {
 
 
 const registerUser = asyncHandler(async (req, res) => {
-    
-    // getting user detailes from postman or frontend
-    // implement validation - not empty 
-    // check user already exist: username or email
-    // check for images, check for avatar
-    // upload them to cloudinary, avatar 
-    // create user object - create entry in db
-    // remove password and refresh token field from response
-    // check for user creation
-    // return res
-
 
     const {fullname, email, username, password } = req.body
-    // console.log(
-    //     "email:", email,
-    //     "username:", username,
-    //     "fullname:", fullname,
-    // );
-
     if(
         [fullname, email, username, password].some(
         (field) => field?.trim() ==="")
@@ -59,8 +42,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 
         const avatarLocalPath = req.files?.avatar[0]?.path;
-        //const coverImageLocalPath = req.files?.coverImage[0]?.path;
-
+        
         let coverImageLocalPath;
         if(req.files && Array.isArray(req.files.coverImage) &&
         req.files.coverImage.length > 0){
@@ -119,7 +101,7 @@ const loginUser = asyncHandler(async (req, res) => {
         throw new apiError(400, "User does not exist")
     }
 
-    const isPasswordvalid = await user.isPasswordcorrect(password)
+    const isPasswordvalid = await user.isPasswordCorrect(password)
 
     if(!isPasswordvalid) {
         throw new apiError(401, "Invalid password credential")
