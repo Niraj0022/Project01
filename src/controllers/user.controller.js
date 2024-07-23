@@ -1,4 +1,4 @@
-import  { asyncHandler } from "../utils/asyncHandler.js";
+import  { asyncHandler } from "../utils/asynchandler.js"
 import  { apiError } from "../utils/apiError.js"
 import { User } from "../models/user.models.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
@@ -167,7 +167,7 @@ const logoutUser = asyncHandler(async( req, res) => {
 export {
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser,
 };
 
 
